@@ -1,0 +1,48 @@
+{% extends 'main.html' %}
+
+{% load static %}
+{% load static tailwind_tags %}
+{% tailwind_css %}
+
+{% block content %}
+<div class="container mx-auto p-4">
+    <h1 class="text-3xl font-bold text-center mb-8">Subcategory Selection</h1>
+
+    <nav class="bg-gray-200 shadow rounded-lg mb-8 overflow-x-auto">
+        <div class="max-w-screen-xl px-4 py-3 mx-auto">
+            <div class="flex space-x-4">
+                {% for category in categories %}
+                <div class="nav-item text-center">
+                    <a href="?category={{ category.id }}" class="block text-gray-800 hover:text-gray-600 transition duration-300 p-2 bg-white rounded-lg shadow-md hover:shadow-lg whitespace-nowrap">
+                        {{ category.name }}
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <h2 class="text-2xl font-bold col-span-full mb-6">Subcategories for {{ desired_category.name }}</h2>
+            {% for subcategory in subcategories %}
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 transform hover:scale-105">
+                <a href="{% url 'available_services' desired_category.name subcategory.id %}">
+                    <h3 class="text-xl font-semibold text-gray-800">{{ subcategory.name }}</h3>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</div>
+
+<style>
+    .nav-item a {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
+{% endblock %}
+

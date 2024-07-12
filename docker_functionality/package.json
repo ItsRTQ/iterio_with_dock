@@ -1,0 +1,10 @@
+{
+  "name": "iterio_app",
+  "version": "1.0.0",
+  "scripts": {
+    "tailwind": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "dependencies": {
+    "tailwindcss": "^2.0.0"
+  }
+}
