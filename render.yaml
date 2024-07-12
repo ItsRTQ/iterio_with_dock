@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: iterio-app
+    env: docker
+    dockerfilePath: ./Dockerfile
+    startCommand: /docker_functionality/entrypoint.sh
+    plan: standard
+    autoDeploy: true
+    envVars:
+      - key: PORT
+        value: 8000
+    mounts:
+      - type: volume
+        name: project-files
+        path: /iterio_project
+    ports:
+      - containerPort: 8000
+
+volumes:
+  - name: project-files
+    hostPath: .
