@@ -11,4 +11,4 @@ python manage.py migrate
 python manage.py tailwind start
 
 # Start the Iterio app
-python manage.py runserver 0.0.0.0:10000
+python manage.py runserver 0.0.0.0:8000
