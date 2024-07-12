@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-dti@m5vqfrcgt7foav-@6_=n+h0tez^3$!r^7mpw$b(e=$5sbd'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['https://iterio-with-dock.onrender.com', 'https://iterio.onrender.com']
+ALLOWED_HOSTS = ['https://iterio.onrender.com']
 
 
 # Application definition
