@@ -16,6 +16,4 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 8000
-
 ENTRYPOINT ["docker_functionality/entrypoint.sh"]
