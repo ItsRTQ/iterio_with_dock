@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-dti@m5vqfrcgt7foav-@6_=n+h0tez^3$!r^7mpw$b(e=$5sbd
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://iterio.onrender.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
